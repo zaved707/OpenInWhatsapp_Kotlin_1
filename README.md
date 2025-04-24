@@ -1,4 +1,4 @@
-# WhatsOpen
+# WhatsOpener
 **Open contacts in whatsapp without saving them on device.**
 ### with Search bar for country codes
 
