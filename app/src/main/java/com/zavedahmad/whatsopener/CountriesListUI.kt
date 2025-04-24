@@ -22,7 +22,7 @@ fun CountriesListUI(viewModel: MainViewModel) {
 
     ) {
         itemsIndexed(
-            items = viewModel.countries,
+            items = viewModel.getFilteredList(),
             key = { index, country -> country.code }) { index, country ->
             Row(
                 modifier = Modifier

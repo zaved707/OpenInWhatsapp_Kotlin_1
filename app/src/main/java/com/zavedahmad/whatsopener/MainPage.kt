@@ -4,6 +4,7 @@ package com.zavedahmad.whatsopener
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,11 +12,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Label
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
@@ -103,19 +106,20 @@ fun MainPage(viewModel: MainViewModel) {
             verticalArrangement = Arrangement.spacedBy(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row (horizontalArrangement = Arrangement.spacedBy(10.dp)){
+            Row (horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically){
                 Button(
                     onClick = { viewModel.showBottomSheet.value = true },
-                    modifier = Modifier.height(60.dp)
+                    modifier = Modifier.height(50.dp)
+
                 ) {
-                    Text(viewModel.selectedCountry.value)
+                    Text(viewModel.selectedCountry.value, fontSize = 20.sp)
                     Icon(
                         painter = painterResource(id = R.drawable.baseline_arrow_drop_down_24),
                         contentDescription = "dropdown"
                     )
                 }
                 TextField(
-
+                    label = { Text("Phone Number")},
                     value = viewModel.inputText[0],
                     onValueChange = { value: String -> viewModel.inputText[0] = value },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
