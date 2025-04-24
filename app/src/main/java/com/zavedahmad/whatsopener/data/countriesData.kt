@@ -1,4 +1,4 @@
-package com.zavedahmad.whatsopener
+package com.zavedahmad.whatsopener.data
 
 fun CountriesData() : String{
     return """

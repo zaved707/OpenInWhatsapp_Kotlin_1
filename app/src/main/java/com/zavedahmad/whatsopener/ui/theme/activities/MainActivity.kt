@@ -1,12 +1,11 @@
-package com.zavedahmad.whatsopener
+package com.zavedahmad.whatsopener.ui.theme.activities
 
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.lifecycle.viewmodel.compose.viewModel
-
-
+import com.zavedahmad.whatsopener.ui.theme.components.MainPage
+import com.zavedahmad.whatsopener.ui.theme.viewModels.MainViewModel
 import com.zavedahmad.whatsopener.ui.theme.WhatsOpenerTheme
 
 class MainActivity : ComponentActivity() {
