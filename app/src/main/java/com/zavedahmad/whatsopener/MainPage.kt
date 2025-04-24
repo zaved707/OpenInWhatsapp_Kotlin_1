@@ -126,7 +126,7 @@ fun MainPage(viewModel: MainViewModel) {
                 )
             }
             Button(
-                onClick = { uriHandler.openUri("https://wa.me/" + viewModel.getNumber()) },
+                onClick = { uriHandler.openUri("https://wa.me/"+viewModel.selectedCountry.value+'-' + viewModel.getNumber()) },
                 modifier = Modifier
                     .height(60.dp)
                     .fillMaxWidth()
