@@ -4,6 +4,7 @@ package com.zavedahmad.whatsopener.ui.theme.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -39,7 +40,7 @@ import com.zavedahmad.whatsopener.ui.theme.viewModels.MainViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainPage(viewModel: MainViewModel) {
+fun MainPage(viewModel: MainViewModel, padding: PaddingValues) {
 
     val uriHandler = LocalUriHandler.current
     if (viewModel.showBottomSheet.value) {
